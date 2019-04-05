@@ -32,6 +32,9 @@ export default function LoginSignup(props) {
                 usernameRef.current.value = "";
                 passwordRef.current.value = "";
             })
+            .catch(err => {
+                setMessage(`${err}`);
+            })
     }
 
     return (
