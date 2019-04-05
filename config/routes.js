@@ -29,7 +29,7 @@ function register(req, res) {
   user.password = bcrypt.hashSync(user.password, 12);
 
   helpers.add(user)
-    .then(res => {
+    .then(() => {
       res.json({ message: 'user registered succesfully'})
     })
     .catch(err => {
